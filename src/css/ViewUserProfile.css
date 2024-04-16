@@ -1,0 +1,46 @@
+.user-profile-container {
+  padding: 30px;
+  display: flex;
+}
+
+.rows {
+  display: flex;
+  justify-content: space-between; /* Space out columns */
+  padding: 30px;
+}
+
+.column1,
+.column2 {
+  width: 48%; /* Adjusted width */
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.Interests-div {
+  padding: 0;
+  margin-top: 0;
+  flex-direction: column;
+}
+
+.update {
+  position: fixed;
+  bottom: 40px;
+  right: 60px;
+  background-color: #cb1010;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.profile-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 3px solid black;
+  margin-bottom: 20px;
+}
+
+.image-div {
+  display: flex;
+  flex-direction: column;
+}

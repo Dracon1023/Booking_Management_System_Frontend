@@ -1,0 +1,38 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+  }
+
+.linkContainer {
+    width:500px;
+    margin:auto;
+    text-align: left;
+}
+.container {
+    width:500px;
+    border:1px black solid;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding:20px;
+}
+
+#submitBtn {
+    background-color: #800000;
+    color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+input {
+    width:100%;
+}
+
+label {
+    display:block;
+}
+
+u {
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.confirmation-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #B20000;
+  }
+  
+  .confirmation-icon {
+    font-size: 4rem;
+  }
+  

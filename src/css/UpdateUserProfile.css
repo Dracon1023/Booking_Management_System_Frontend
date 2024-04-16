@@ -1,0 +1,88 @@
+/* UpdateUserProfile.css */
+
+form {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  
+  .photo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  
+  .profile-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 200%;
+    border: 3px solid black;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  span {
+    margin-left: 5px;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #800000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #cb1010;
+  }
+  
+  .add {
+    background-color: #800000;
+    width: 110px;
+  }
+  
+  .save {
+    float: right;
+  }
+  
+  .card-info {
+    padding-top: 20px;
+  }
+  .interests,
+.favorite-genre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.interests label,
+.favorite-genre label {
+  display: flex;
+  align-items: center;
+}
+
+.interests input[type="checkbox"],
+.favorite-genre input[type="radio"] {
+  margin-right: 5px;
+}

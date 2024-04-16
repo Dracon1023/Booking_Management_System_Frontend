@@ -1,0 +1,39 @@
+.container {
+    padding: 20px;
+    width: 50%; /* or your desired width */
+    margin: 0 auto; /* this will center the container */
+  }
+  
+  
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .movie-card,
+  .food-card {
+    margin-bottom: 20px;
+    width: 100%; /* Set a specific width if needed */
+  }
+  
+  .total-cost {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .card-img-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
