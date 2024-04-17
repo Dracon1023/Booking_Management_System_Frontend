@@ -22,3 +22,5 @@ yarn-error.log*
 
 .vs/
 Booking-Management-System-SE/.vs
+
+/.env
