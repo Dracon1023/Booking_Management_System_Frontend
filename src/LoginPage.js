@@ -5,6 +5,8 @@ import GoogleLoginButton from "./components/GoogleLoginButton";
 import { LoginSocialFacebook } from "reactjs-social-login";
 import { FacebookLoginButton } from "react-social-login-buttons";
 
+const backendURL = "https://booking-services-aldoub.onrender.com"
+
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +27,7 @@ function LoginPage() {
         "password": password
     })
 
-  fetch('http://localhost:80/users/login', {  
+  fetch(`${backendURL}/users/login`, {  
 
       method: 'POST', 
       mode: 'cors', 
