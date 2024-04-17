@@ -15,6 +15,6 @@ jobs:
                 docker push ghcr.io/dracon1023/booking-services-frontend:latest
             - name: Publish the image to harbor
               run: |
-                docker login dracon1023.container-registry.com -u alexandermd1023@gmail.com -p qCdSLjxbTZz8Ia6lfEGieM9CkHOfmiFW
-                docker tag ghcr.io/dracon1023/booking-services-frontend:latest dracon1023.container-registry.com/library/booking-service-frontend:latest
-                docker push ghcr.io/dracon1023/booking-services-frontend:latest
+                docker login c8n.io -u alexandermd1023@gmail.com -p qCdSLjxbTZz8Ia6lfEGieM9CkHOfmiFW
+                docker tag ghcr.io/dracon1023/booking-services-frontend:latest c8n.io/dracon1023/booking-services-frontend:latest
+                docker push c8n.io/dracon1023/booking-services-frontend:latest
