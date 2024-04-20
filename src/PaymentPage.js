@@ -60,9 +60,7 @@ function PaymentPage() {
 
   const getBookingDetails = () => {
     const country = localStorage.getItem('country');
-    let totalCost = moviePrice * totalSeats +
-      validFoodItems.reduce((total, item) => total + (parseFloat(item.price || '0') * parseInt(item.quantity || '0')), 0);
-    totalCost = isNaN(totalCost) ? '0.00' : totalCost.toFixed(2);
+    let totalCost = localStorage.getItem('totalCost');
     const currencySymbol = country === 'India' ? '₹' : '$';
 
     return {
