@@ -78,7 +78,7 @@ const MovieList = ({ selectedMovie, country }) => {
   return (
     <div className="movie-list" style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap" }}>
       {movies.filter(movie => !selectedMovie || movie.title.toLowerCase().includes(selectedMovie.toLowerCase())).map((movie) => (
-        <div className="movie-card" key={movie._id} style={{ flex: "0 0 calc(33.33% - 20px)", margin: "10px" }}>
+        <div className="movie-card" key={movie._id} style={{ flex: "0 0 calc(33.33% - 20px)", margin: "10px", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <img src={movie.poster} alt={movie.title} className="movie-poster" />
           <div className="movie-info">
             <h3 className="movie-title">{movie.title}</h3>
@@ -95,7 +95,7 @@ const MovieList = ({ selectedMovie, country }) => {
                   hours = 0; // Convert 12 AM to 00 hours
                 }
                 movieTime.setHours(hours, parseInt(minutes), 0, 0);
-
+  
                 // Determine if the selected date is today and if the movie time is in the past
                 
                 const dateString = currentDayStart.toISOString().split('T')[0];
@@ -103,11 +103,11 @@ const MovieList = ({ selectedMovie, country }) => {
                 const isToday = selectedDate === dateString;
                 const isPastTime = isToday && movieTime < currentTime;
                 
-
+  
                 // Determine the label and disabled state
                 const label = isPastTime ? 'Past' : 'Available';
                 const disabled = isToday ? isPastTime : false;
-
+  
                 return (
                   <TimeSlot
                     key={index}
@@ -124,6 +124,7 @@ const MovieList = ({ selectedMovie, country }) => {
       ))}
     </div>
   );
+  
 };
 
 
@@ -143,26 +144,31 @@ const MovieSelector = ({ onUpdateMovie, date, setDate }) => {
   };
 
   return (
-    <div className="movie-selector">
-      <label htmlFor="movie">Select a movie:</label>
+    <div className="movie-selector" style={{display: 'flex', flexDirection: 'column', alignItems: 'center',color: '#CB1110', fontSize: '20px', justifyContent: 'center',width: '1565px'}}>
+      <label htmlFor="movie" className="label-font" style={{fontFamily: 'Trirong, serif'}}>Select a movie:</label>
       <input
         type="text"
         id="movie"
         name="movie"
         value={movie}
         onChange={handleMovieChange}
+        className="small-input"
         placeholder="Enter a movie name"
+        style={{width: '50%'}}
       />
-      <label htmlFor="date">Select a date:</label>
+      <label htmlFor="date" className="label-font" style={{fontFamily: 'Trirong, serif'}}>Select a date:</label>
       <input
         type="date"
         id="date"
         name="date"
-        value={date} // Use the date prop for the input value
+        value={date} 
+        className="small-input"
         onChange={handleDateChange}
+        style={{width: '50%', textAlign: 'center'}}
       />
     </div>
   );
+  
 };
 
 
@@ -225,8 +231,8 @@ const CountryCitySelector = ({ onUpdateCountry, onUpdateCity }) => {
   };
 
   return (
-    <div className="country-city-selector">
-      <label htmlFor="country">Choose a country:</label>
+    <div className="country-city-selector" style={{display: 'flex', flexDirection: 'column',color: '#CB1110', fontSize: '20px', alignItems: 'center', justifyContent: 'center', width: '1565px'}}>
+      <label htmlFor="country" className="label-font">Choose a country:</label>
       <input
         type="text"
         id="country"
@@ -244,7 +250,7 @@ const CountryCitySelector = ({ onUpdateCountry, onUpdateCity }) => {
 
 
 
-      <label htmlFor="city">Choose a city:</label>
+      <label htmlFor="city" className="label-font">Choose a city:</label>
       <input
         type="text"
         id="city"
@@ -329,13 +335,14 @@ const TheatreSelector = ({ city, onUpdateTheatre }) => {
   };
 
   return (
-    <div className="theatre-selector">
-      <label htmlFor="theatre">Select a theatre:</label>
+    <div className="theatre-selector" style={{display: 'flex', flexDirection: 'column', alignItems: 'center',color: '#CB1110', fontSize: '20px', justifyContent: 'center'}}>
+      <label htmlFor="theatre" style={{fontFamily: 'Trirong, serif'}}>Select a theatre:</label>
       <select
         id="theatre"
         name="theatre"
         value={selectedTheatre}
         onChange={handleTheatreChange}
+        style={{width: '10%'}}
       >
         <option value="" disabled>-- Select Theatre --</option>
         {theatres
@@ -346,9 +353,9 @@ const TheatreSelector = ({ city, onUpdateTheatre }) => {
           ))
           : null}
       </select>
-
     </div>
   );
+  
 };
 
 const MoviePage = () => {
@@ -396,7 +403,7 @@ const MoviePage = () => {
 
   return (
     <div className="movie-page">
-      <h1>Movie Page</h1>
+      <h1 className="label-font">Movie Page</h1>
       <MovieContext.Provider value={{ selectedMovie, selectedMovieDetails, setSelectedMovie }}>
         <CountryCitySelector onUpdateCountry={updateCountry} onUpdateCity={updateCity} />
         <TheatreSelector city={city} onUpdateTheatre={updateTheatre} />
