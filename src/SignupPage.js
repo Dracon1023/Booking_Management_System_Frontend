@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import GoogleLoginButton from "./components/GoogleLoginButton";
 import "./css/SignupPage.css";
 
-const backendURL = "https://booking-services-aldoub.onrender.com"
-
 function SignupPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -27,7 +25,7 @@ function SignupPage() {
     event.preventDefault();
 
     try {
-        const response = await fetch(`${backendURL}/users/signup`, {
+      const response = await fetch("http://localhost:80/users/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

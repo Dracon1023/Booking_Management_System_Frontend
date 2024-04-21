@@ -24,7 +24,10 @@
     border-radius: 3px;
     margin-top: 10px;
 }
-
+#submitBtn:hover{
+    background-color: #cb1010;
+    
+  }
 input {
     width:100%;
 }

@@ -45,7 +45,7 @@ form {
   }
   
   button {
-    background-color: #800000;
+    background-color: #cb1010;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -54,7 +54,7 @@ form {
   }
   
   button:hover {
-    background-color: #cb1010;
+    background-color: #800000;
   }
   
   .add {

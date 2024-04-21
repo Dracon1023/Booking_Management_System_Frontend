@@ -3,10 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./css/PasswordResetPage.css";
 import Alert from '@mui/material/Alert';
 
-const backendURL = "https://booking-services-aldoub.onrender.com"
-
 function PasswordResetPage() {
-  let host = backendURL;
+  let host = "http://localhost:80";
   const navigate = useNavigate();
   const [showErrorAlert, setErrorAlert] = useState(false);
   const [showInputAlert, setInputAlert] = useState(false);
