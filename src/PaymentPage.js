@@ -57,6 +57,7 @@ function PaymentPage() {
   const validSeatNumbers = Array.isArray(seatNumbers) ? seatNumbers : [];
   const validFoodItems = Array.isArray(foodItems) ? foodItems : [];
 
+  var transactionID = 'TRANS-' + Date.now();
 
   const getBookingDetails = () => {
     const country = localStorage.getItem('country');
@@ -64,6 +65,7 @@ function PaymentPage() {
     const currencySymbol = country === 'India' ? '₹' : '$';
 
     return {
+      transactionID: transactionID,
       movie: selectedMovie.title,
       time: selectedTime,
       date: selectedDate,
@@ -102,6 +104,7 @@ function PaymentPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     var paymentDetails = JSON.stringify({
+      "transactionID": transactionID,
       "email": email,
       "firstname": firstname,
       "lastname": lastname,
