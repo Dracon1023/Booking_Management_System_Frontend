@@ -71,6 +71,7 @@ const convertToINR = (priceInUSD) => {
 const country = localStorage.getItem('country');
 console.log(country);
 
+
 // A component to render the food ordering page
 const FoodOrderingPage = () => {
   const [foodItems, setFoodItems] = useState([]);
@@ -109,11 +110,15 @@ const FoodOrderingPage = () => {
           setCartItems={setCartItems}
         />
       ))}
-      <CartTotal cartItems={cartItems} />
-      <button style={{ position: 'fixed', bottom: '20px', right: '20px' }} onClick={handleShowCart}>Show Cart</button>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <CartTotal cartItems={cartItems} />
+        <button onClick={handleShowCart}>Show Cart</button>
+      </div>
     </div>
   );
 };
+
+
 
 
 export default FoodOrderingPage;
