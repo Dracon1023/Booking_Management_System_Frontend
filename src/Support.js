@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import "./css/Support.css"
+
+const backendURL = "https://booking-services-aldoub.onrender.com"
+
 const Support = () => {
     const [searchVal, setSearchVal] = useState('');
     const [data, setData] = useState([]);
@@ -8,7 +11,7 @@ const Support = () => {
             return
         }
         if (searchVal.includes("@")) { // email
-            fetch(`http://localhost:80/paymentInfoByEmail/${searchVal}`, {  
+            fetch(`${backendURL}/paymentInfoByEmail/${searchVal}`, {  
                 method: 'GET', 
                 mode: 'cors', 
                 headers: { 'Content-Type': 'application/json' }
@@ -26,7 +29,7 @@ const Support = () => {
             if (!searchVal.includes("TRANS-")) {
                 ID = "TRANS-" + searchVal;
             }
-            fetch(`http://localhost:80/paymentInfoByID/${ID}`, {  
+            fetch(`${backendURL}/paymentInfoByID/${ID}`, {  
                 method: 'GET', 
                 mode: 'cors', 
                 headers: { 'Content-Type': 'application/json' }

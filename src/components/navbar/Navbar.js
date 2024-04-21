@@ -17,7 +17,7 @@ const Navbar = ( ) => {
         if (!token) {
           throw new Error("Token not found in session storage");
         }
-        const response = await fetch("http://localhost:80/userType", {
+          const response = await fetch("https://booking-services-aldoub.onrender.com/userType", {
           method: "GET",
           headers: {
             "Authorization": token
