@@ -1,0 +1,35 @@
+.outsideDiv {
+    padding: 20px
+}
+
+.searchDiv {
+    display: flex;
+}
+
+#searchVal {
+    width: 20%;
+    margin-right: 10px;
+}
+
+#submit {
+    padding-left: 10px;
+   
+}
+
+#extButton {
+    position: absolute;
+    right: 10px
+}
+
+.info {
+    max-height: 75vh;
+    overflow: auto;
+}
+
+p {
+    margin: 3px
+}
+
+.row {
+    width: 50%
+}

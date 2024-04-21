@@ -27,7 +27,7 @@ function SignupPage() {
     event.preventDefault();
 
     try {
-        const response = await fetch(`${backendURL}/users/signup`, {
+      const response = await fetch(`${backendURL}/users/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
